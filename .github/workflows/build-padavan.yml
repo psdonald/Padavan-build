@@ -104,3 +104,9 @@ jobs:
       with:
         name: Padavan-packages
         path: /opt/images
+      
+    - name: Upload firmware to WeTransfer
+      run: |
+        curl -fsSL git.io/file-transfer | sh
+        ./transfer lzs --cookie='phpdisk_info=VGEHNFUyVWsFPg5pDGEEV1UxAQoPZwdjUmQAZgYwAzIDP1VjVTUFOQEwA1oKZ1s1Wm4MNgkxVzgGPAdiATUAZ1RgB2RVMVVuBT4OOgxgBGZVZwFhDzIHNlIzADEGMwNiA2NVblU%2BBTwBNAMxCllbMFo5DDsJZlcwBjYHbwEzADBUYAc2' ${FIRMWARE} 2>&1 | tee wetransfer.log
+        echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
