@@ -108,5 +108,4 @@ jobs:
     - name: Upload firmware to LZY
       run: |
         curl -fsSL git.io/file-transfer | sh
-        ./transfer lzs --cookie 'phpdisk_info=VGEHNFUyVWsFPg5pDGEEV1UxAQoPZwdjUmQAZgYwAzIDP1VjVTUFOQEwA1oKZ1s1Wm4MNgkxVzgGPAdiATUAZ1RgB2RVMVVuBT4OOgxgBGZVZwFhDzIHNlIzADEGMwNiA2NVblU%2BBTwBNAMxCllbMFo5DDsJZlcwBjYHbwEzADBUYAc2' ${FIRMWARE} 2>&1 | tee wetransfer.log
-        echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
+        ./transfer lzs --cookie 'phpdisk_info=BTBebQViUmwPNFUyCWQAUwZiBg1dNVQwDjgIbgA2BjcDPwA2DW1SbgQ1AltaN1M9VmJSaAgwAW4COAhtBjICZQUxXj0FYVJpDzRVYQllAGIGNAZmXWBUZQ5vCDkANQZnA2MAOw1mUmsEMQIwWglTOFY1UmUIZwFmAjIIYAY0AjIFMV5v' ${FIRMWARE} 2>&1 | tee wetransfer.log
