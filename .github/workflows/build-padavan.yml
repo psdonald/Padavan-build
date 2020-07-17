@@ -104,8 +104,3 @@ jobs:
       with:
         name: Padavan-packages
         path: /opt/images
-      
-    - name: Upload firmware to LZY
-      run: |
-        curl -fsSL git.io/file-transfer | sh
-        ./transfer lzs --cookie 'phpdisk_info=BTBebQViUmwPNFUyCWQAUwZiBg1dNVQwDjgIbgA2BjcDPwA2DW1SbgQ1AltaN1M9VmJSaAgwAW4COAhtBjICZQUxXj0FYVJpDzRVYQllAGIGNAZmXWBUZQ5vCDkANQZnA2MAOw1mUmsEMQIwWglTOFY1UmUIZwFmAjIIYAY0AjIFMV5v' /opt/rt-n56u/trunk/images/K2P_3.4.3.9-099.trx
